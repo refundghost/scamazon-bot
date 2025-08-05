@@ -145,3 +145,92 @@ footer {
   background: linear-gradient(135deg, #ffcc00, #ff6b00);
   text-decoration: underline;
 }
+
+/* Glitch Header */
+h1 {
+  position: relative;
+  color: #fff;
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h1::before, h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #f0f;
+  clip: rect(0, 900px, 0, 0);
+}
+h1::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  color: #0ff;
+}
+h1::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  color: #f0f;
+}
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  5% { clip: rect(0, 9999px, 5px, 0); }
+  10% { clip: rect(0, 9999px, 0, 0); }
+  15% { clip: rect(0, 9999px, 5px, 0); }
+  20% { clip: rect(0, 9999px, 0, 0); }
+  25% { clip: rect(0, 9999px, 5px, 0); }
+  30% { clip: rect(0, 9999px, 0, 0); }
+  35% { clip: rect(0, 9999px, 5px, 0); }
+  40% { clip: rect(0, 9999px, 0, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(5px, 9999px, 10px, 0); }
+  20% { clip: rect(0, 9999px, 0, 0); }
+  30% { clip: rect(5px, 9999px, 10px, 0); }
+  40% { clip: rect(0, 9999px, 0, 0); }
+  50% { clip: rect(5px, 9999px, 10px, 0); }
+  60% { clip: rect(0, 9999px, 0, 0); }
+  70% { clip: rect(5px, 9999px, 10px, 0); }
+  80% { clip: rect(0, 9999px, 0, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+/* Retro Background Gradient */
+body {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  background-attachment: fixed;
+}
+
+/* Retro Table Styling */
+table {
+  border: 2px solid #0ff;
+  background-color: #000;
+}
+th {
+  background-color: #111;
+  color: #0ff;
+  font-family: monospace;
+}
+td {
+  color: #0f0;
+  font-family: monospace;
+}
+
+/* Neon Borders */
+section {
+  border: 1px solid #00f0ff22;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  background-color: #16161688;
+}
+
+/* Footer neon fade */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #999;
+  text-shadow: 0 0 3px #0ff, 0 0 5px #0ff;
+}
