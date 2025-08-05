@@ -90,7 +90,51 @@ python app.py</code></pre></li>
     <p><a href="https://github.com/refundghost/scamazon-bot">View GitHub Repo</a></p>
     </footer>
     
-  </main>
+  
+    <section id="trailer">
+      <h2>🎬 Scamazon in Action</h2>
+      <video width="100%" height="auto" controls poster="assets/scamazon_primetime.png">
+        <source src="assets/trailer-placeholder.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><a href="#simulator" class="gumroad-link">🧪 Try the Refund Simulator</a></p>
+    </section>
+
+    <section id="lockout">
+      <h2>🔒 Tier 4 Preview</h2>
+      <div class="lockout-box">
+        <p><strong>Access Restricted:</strong> This section is only available to Tier 4 members.</p>
+        <p class="blurred">Refund Probability Engine, ChatGPT Flow Rewriter, Vault Encryption System...</p>
+        <a href="https://refundghost.gumroad.com/l/scamazon" class="gumroad-link">Unlock via Gumroad</a>
+      </div>
+    </section>
+
+    <section id="simulator">
+      <h2>🧪 Refund Test Simulator</h2>
+      <label>Item Type:
+        <select id="itemType">
+          <option>Electronics</option>
+          <option>Clothing</option>
+          <option>Supplements</option>
+          <option>Household</option>
+        </select>
+      </label><br/><br/>
+      <label>Refund Reason:
+        <select id="refundReason">
+          <option>Defective</option>
+          <option>Wrong item</option>
+          <option>Package damaged</option>
+          <option>Missing item</option>
+        </select>
+      </label><br/><br/>
+      <label>Days Since Delivery:
+        <input type="number" id="daysElapsed" min="0" max="30" />
+      </label><br/><br/>
+      <button onclick="runSimulator()">🚀 Analyze Refund Strategy</button>
+      <div id="simResult" class="sim-result"></div>
+    </section>
+    </main>
+    
 
   <script src="script.js"></script>
 </body>
