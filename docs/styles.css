@@ -255,3 +255,32 @@ footer {
   border-left: 4px solid #00e676;
   font-family: monospace;
 }
+
+/* Responsive Tables */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Form Responsive */
+label, select, input, button {
+  font-size: 1rem;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Simulator container tweaks */
+#simulator {
+  background-color: #0f0f0f;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Glitch header fix */
+h1 {
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
