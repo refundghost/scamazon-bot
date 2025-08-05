@@ -1,38 +1,42 @@
-# 🕵️‍♂️ RefundGhost Core
+# 🛒 Scamazon Bot™ — Strategic Refund Automation
 
-RefundGhost is your stealthy sidekick for mastering the art of e-commerce refunds. This repo contains automation tools, AI excuse generators, and Discord bot integrations to help you refund smarter, not harder.
+Welcome to the most advanced refund engineering system on the internet. Scamazon Bot™ is a modular toolkit for mastering refund logic, timing, and policy flow — no fraud, no fakes, just forward engineering.
 
-## 🚀 Features
+---
 
-- 🤖 AI-powered excuse generator
-- 📦 Return window tracker
-- 💬 Discord bot for refund alerts
-- 🧠 Refund strategy templates
+## 🎖️ Tiered Modules
 
-## 📁 Structure
+| Tier | Module | Description |
+|------|--------|-------------|
+| 🟢 Tier 1 | Basic Refund Bot | CLI refund triggers and excuses |
+| 🔵 Tier 2 | Strategic Flow Engine | Return timing logic and category profiles |
+| 🟣 Tier 3 | CLI Planner | Refund calendar, tone selector, and trigger mapping |
+| 🔴 Tier 4 | AI Dashboard | ChatGPT excuse generator, refund probability meter, encrypted Vault logs, and Amazon scraper |
 
-- `src/` — Core Python scripts
-- `data/` — JSON templates and examples
-- `docs/` — Setup guides and usage tips
+---
 
-## 🛠️ Installation
+## 🧠 Tier 4: AI Forward Refund Dashboard™
+
+> Predictive refund logic based on Amazon’s own structure. No lies, just logic.
+
+📦 Features:
+- Refund-by-design logic engine
+- ChatGPT excuse rewriting
+- Refund probability meter
+- Encrypted Vault log system
+- Tier 4 login access
+- Admin panel for refund stats
+- Amazon scraper for auto-fill
+
+📁 Location: [`tier4_dashboard/`](./tier4_dashboard)
+
+🔐 Access: Requires Tier 4 credentials (`users.json`)
+
+---
+
+## 🚀 Setup Instructions
+
+### 🔧 Install Dependencies
 
 ```bash
-git clone https://github.com/refundghost/scamazon-bot.git
-cd scamazon-bot
-pip install -r requirements.txt
-```
-
-## 🧪 Usage
-
-Run the excuse generator:
-
-```bash
-python src/excuse_generator.py
-```
-
-## 📜 License
-
-MIT — feel free to fork, remix, and refund responsibly.
-
-> ⚠️ For educational purposes only. Use ethically.
+pip install flask openai cryptography beautifulsoup4 requests
