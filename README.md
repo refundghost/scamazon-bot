@@ -1,3 +1,4 @@
+![Scamazon Primetime](docs/assets/scamazon_primetime.png)
 📝 Full README.md for scamazon-bot
 markdown
 # 🛒 Scamazon Bot™ — Strategic Refund Automation
