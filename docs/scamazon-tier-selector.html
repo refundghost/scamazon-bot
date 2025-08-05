@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Scamazon Tier</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #0ff;
+    }
+    .tier {
+      border: 2px solid #333;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      transition: all 0.3s ease-in-out;
+    }
+    .tier.highlight {
+      border-color: #0f0;
+      background: #222;
+      box-shadow: 0 0 10px #0f0;
+    }
+    .tier h2 {
+      margin-top: 0;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scamazon PrimeTime™ – Pick Your Tier</h1>
+
+  <div class="tier" id="Tier0">
+    <h2>🟢 Tier 0 – Starter Kit (Free)</h2>
+    <p>Refund philosophy, CLI triggers, and manual logs.</p>
+    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier0">Choose Tier 0</a>
+  </div>
+
+  <div class="tier" id="Tier1">
+    <h2>🔵 Tier 1 – Intelligence Core ($18)</h2>
+    <p>Refund tone selector, return window analyzer, trigger enhancer.</p>
+    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier1">Choose Tier 1</a>
+  </div>
+
+  <div class="tier" id="Tier2">
+    <h2>🟣 Tier 2 – Domination Pack ($38)</h2>
+    <p>Calendar planner, flow templates, advanced triggers.</p>
+    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier2">Choose Tier 2</a>
+  </div>
+
+  <div class="tier" id="Tier3">
+    <h2>🔴 Tier 3 – Empire Starter ($58)</h2>
+    <p>Refund simulator, AI excuse generator, probability logic.</p>
+    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier3">Choose Tier 3</a>
+  </div>
+
+  <div class="tier" id="Tier4">
+    <h2>🛡 Tier 4 – The Vault ($108)</h2>
+    <p>Full encrypted toolkit, scraper, dashboard, and all Tiers unlocked.</p>
+    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier4">Choose Tier 4</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const wanted = params.get("wanted");
+    if (wanted) {
+      const highlight = document.getElementById(wanted);
+      if (highlight) highlight.classList.add("highlight");
+    }
+  </script>
+</body>
+</html>
