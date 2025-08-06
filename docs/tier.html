@@ -1,90 +1,198 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Choose Your Scamazon Tier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scamazon PrimeTime™ – Choose Your Tier</title>
   <style>
     body {
-      background: #111;
-      color: #eee;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
-      max-width: 800px;
-      margin: auto;
     }
     h1 {
-      text-align: center;
+      font-size: 2.5rem;
       color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 5px #00f;
+      margin-bottom: 1rem;
     }
-    .tier {
-      border: 2px solid #333;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .card {
+      background: #1a1a1a;
+      border: 2px solid #444;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
       transition: all 0.3s ease-in-out;
     }
-    .tier.highlight {
-      border-color: #0f0;
-      background: #222;
-      box-shadow: 0 0 10px #0f0;
+    .card:hover {
+      box-shadow: 0 0 15px #0ff, 0 0 20px #00f;
+      border-color: #0ff;
+      transform: scale(1.02);
     }
-    .tier h2 {
+    .card.highlight {
+      border-color: #0f0;
+      box-shadow: 0 0 20px #0f0;
+    }
+    .card h2 {
       margin-top: 0;
+      color: #0ff;
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: #0f0;
+    }
+    .features {
+      list-style: none;
+      padding-left: 0;
+      text-align: left;
+    }
+    .features li {
+      margin-bottom: 0.5rem;
     }
     .cta {
-      display: inline-block;
       margin-top: 1rem;
-      padding: 0.5rem 1rem;
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
       background: #0ff;
       color: #000;
       font-weight: bold;
-      text-decoration: none;
       border-radius: 6px;
+      text-decoration: none;
+    }
+    .countdown {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 0.5rem;
+    }
+    .quiz {
+      margin-top: 4rem;
+      text-align: center;
+      border-top: 1px solid #333;
+      padding-top: 2rem;
+      max-width: 700px;
+    }
+    .quiz input[type=radio] {
+      margin-right: 0.5rem;
+    }
+    .quiz label {
+      display: block;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+    .quiz h2 {
+      color: #ff0;
+    }
+    #quiz-result {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #0f0;
     }
   </style>
 </head>
 <body>
-  <h1>Scamazon PrimeTime™ – Pick Your Tier</h1>
-
-  <div class="tier" id="Tier0">
-    <h2>🟢 Tier 0 – Starter Kit (Free)</h2>
-    <p>Refund philosophy, CLI triggers, and manual logs.</p>
-    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier0">Choose Tier 0</a>
+  <h1>Choose Your Scamazon Tier</h1>
+  <div class="container">
+    <div class="card" id="Tier0">
+      <h2>🟢 Tier 0</h2>
+      <div class="price">Free</div>
+      <ul class="features">
+        <li>✅ CLI Refund Triggers</li>
+        <li>✅ Refund Philosophy Breakdown</li>
+        <li>✅ Manual Log Template</li>
+        <li>✅ Legal Disclaimer</li>
+      </ul>
+      <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier0">Get Tier 0</a>
+      <div class="countdown">⏳ Instant access</div>
+    </div>
+    <div class="card" id="Tier1">
+      <h2>🔵 Tier 1</h2>
+      <div class="price">$18</div>
+      <ul class="features">
+        <li>🎯 Tone Selector</li>
+        <li>📆 Return Window Analyzer</li>
+        <li>📋 Trigger Enhancer</li>
+        <li>🧠 Reason Tier List</li>
+      </ul>
+      <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier1">Get Tier 1</a>
+      <div class="countdown">⏳ Countdown starts on download</div>
+    </div>
+    <div class="card" id="Tier2">
+      <h2>🟣 Tier 2</h2>
+      <div class="price">$38</div>
+      <ul class="features">
+        <li>🗂️ Category Flow Profiles</li>
+        <li>📅 Refund Calendar</li>
+        <li>🔁 Multi-Step Planner</li>
+        <li>📝 Excuse Archive</li>
+      </ul>
+      <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier2">Get Tier 2</a>
+      <div class="countdown">⏳ Launch-ready playbook</div>
+    </div>
+    <div class="card" id="Tier3">
+      <h2>🔴 Tier 3</h2>
+      <div class="price">$58</div>
+      <ul class="features">
+        <li>🤖 AI Excuse Generator</li>
+        <li>📊 Refund Probability Meter</li>
+        <li>🧪 Refund Simulator</li>
+      </ul>
+      <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier3">Get Tier 3</a>
+      <div class="countdown">⏳ Automation unlocks instantly</div>
+    </div>
+    <div class="card" id="Tier4">
+      <h2>🛡 Tier 4</h2>
+      <div class="price">$108</div>
+      <ul class="features">
+        <li>🔐 Encrypted Vault & Logs</li>
+        <li>📈 Admin Dashboard</li>
+        <li>🧠 Chatbot Strategy Mode</li>
+        <li>🕵️ Amazon Auto-Scraper</li>
+      </ul>
+      <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier4">Get Tier 4</a>
+      <div class="countdown">⏳ Unlocks full refund empire</div>
+    </div>
   </div>
 
-  <div class="tier" id="Tier1">
-    <h2>🔵 Tier 1 – Intelligence Core ($18)</h2>
-    <p>Refund tone selector, return window analyzer, trigger enhancer.</p>
-    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier1">Choose Tier 1</a>
-  </div>
-
-  <div class="tier" id="Tier2">
-    <h2>🟣 Tier 2 – Domination Pack ($38)</h2>
-    <p>Calendar planner, flow templates, advanced triggers.</p>
-    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier2">Choose Tier 2</a>
-  </div>
-
-  <div class="tier" id="Tier3">
-    <h2>🔴 Tier 3 – Empire Starter ($58)</h2>
-    <p>Refund simulator, AI excuse generator, probability logic.</p>
-    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier3">Choose Tier 3</a>
-  </div>
-
-  <div class="tier" id="Tier4">
-    <h2>🛡 Tier 4 – The Vault ($108)</h2>
-    <p>Full encrypted toolkit, scraper, dashboard, and all Tiers unlocked.</p>
-    <a class="cta" href="https://scamazonprimetime.gumroad.com/l/ulcyhg?wanted=Tier4">Choose Tier 4</a>
+  <div class="quiz">
+    <h2>🧠 Not Sure? Let Me Recommend a Tier</h2>
+    <label><input type="radio" name="quiz" value="Tier0"> I want to explore refunding with no risk.</label>
+    <label><input type="radio" name="quiz" value="Tier2"> I want strategy and flow templates.</label>
+    <label><input type="radio" name="quiz" value="Tier3"> I want automation and AI tools.</label>
+    <label><input type="radio" name="quiz" value="Tier4"> I want everything, full power.</label>
+    <div id="quiz-result"></div>
   </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const wanted = params.get("wanted");
     if (wanted) {
-      const highlight = document.getElementById(wanted);
-      if (highlight) highlight.classList.add("highlight");
+      const el = document.getElementById(wanted);
+      if (el) el.classList.add("highlight");
     }
+
+    document.querySelectorAll('input[name="quiz"]').forEach((el) => {
+      el.addEventListener('change', () => {
+        const val = el.value;
+        const link = document.querySelector(`#${val} .cta`);
+        document.getElementById("quiz-result").innerHTML = 
+          `📦 You should get <strong>${val}</strong> → <a href="${link.href}">Click here</a>`;
+      });
+    });
   </script>
 </body>
 </html>
